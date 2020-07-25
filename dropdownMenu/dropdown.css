@@ -1,0 +1,92 @@
+/*gradient background css*/
+body {
+    background: rgb(36,0,28);
+    background: linear-gradient(90deg, rgba(36,0,28,1) 0%, rgba(128,9,68,1) 35%, rgba(255,0,147,1) 100%);
+    padding: 0;
+    margin: 0;
+    /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
+    font-family: 'Poppins', sans-serif;
+}
+
+/*--Nested li's--*/
+/*---Child selector--(>)--*/
+/*select and style every <p> element where the parent is a <div> element */
+/*it is checking first child so-- nav child is-- ul*/
+/*immediate child*/
+nav > ul {
+    list-style: none; /*remove bullets*/
+    display: flex;
+    justify-content: center;
+    
+}
+
+/*--Nested list--*/
+nav ul li a {       /*a is inline element*/
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #fff;
+    color: #111;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-right: 1px solid #ccc;
+}
+
+/**/
+nav ul li:last-child a {
+    border-right: 0;
+}
+
+/*--dropdown--hover effect----*/
+nav ul li a:hover {
+    width: 100%; /*effect*/
+    box-sizing: border-box; /*--size container--it is not exceeding particular width*/
+    background: rgb(36,0,28);
+    background: linear-gradient(90deg, rgba(36,0,28,1) 0%, rgba(128,9,68,1) 35%, rgba(255,0,147,1) 100%);
+    background-color: rgba(255,0,147,1);
+    color: #fff;
+    border: none;
+    transition: ease all 0.6s; /*little bit animation*/
+    border-left: 3px solid #111; /*rgb(101,9,104)*/
+}
+
+/*--how can i remove bullets--2nd ul=li--or profile li's gone*/
+nav ul ul {  /*descendent selector*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /*hiding profile li's*/
+}
+
+/*--nth-child--*/
+/*nav ul ul li:last-child a {
+    border-right: none;
+}*/
+
+/*--changes to profile--*/
+/*use psuedo*/
+nav ul ul li a {
+    width: 200px;
+    display: block; /**/
+    border-bottom: 1px solid #eee; /*broad*/
+}
+
+/*most important*/
+/*--profile hover effect--*/
+/*descending selector--it is checking each and every thing*/
+/*if u want hover effect use in drop down*/
+ul li:hover > ul {
+      display: block; /*where ul is it display*/
+      position: absolute;
+      
+}
+
+
+
+
+
+
+
+
